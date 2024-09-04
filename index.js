@@ -45,7 +45,7 @@ async function run() {
     if (!isWindows(osPlatform)) {
       childProcess.exec(`chmod +x ${toolPath}/${phrase}`);
     }
-    core.setOutput(toolPath);
+    core.setOutput('path',toolPath);
   } catch (error) {
     core.setFailed(error);
   }
